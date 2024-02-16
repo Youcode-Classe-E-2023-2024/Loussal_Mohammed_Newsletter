@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -18,6 +17,36 @@ class User extends Authenticatable
     use Notifiable;
     use TwoFactorAuthenticatable;
 
+
+    const Role_MEMBER  = 'Member';
+    const Role_REDACT  = 'Redact';
+    const Role_ADMIN  = 'admin';
+
+    public function hasAnyRole($roles): bool
+    {
+        return in_array($this->role, $roles);
+    }
+
+    public function admin() {
+        return $this->hasOne(admin::class);
+    }
+    public function redactor() {
+        return $this->hasOne(redactor::class);
+    }
+    public function member() {
+        return $this->hasOne(member::class);
+    }
+
+
+    protected $guarded = [
+        'id',
+        'two_factor_secret',
+        'two_factor_recovery_codes',
+        'two_factor_confirmed_at',
+        'remember_token',
+        'created_at',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,6 +56,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**

@@ -5,14 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class admin extends Model
+class Newsletter extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-
+        'newer'
     ];
-    public function user() {
-        return $this->belongsTo(User::class);
-    }
 }
