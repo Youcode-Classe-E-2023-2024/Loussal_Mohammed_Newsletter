@@ -15,7 +15,26 @@
         {{ session('success') }}
     </div>
 @endif
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+@if(session('success'))
+    <div class="alert alert-danger">
+        {{ session('success') }}
+    </div>
+@endif
 
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <!-- BEGIN LOADER -->
 <div id="load_screen"> <div class="loader"> <div class="loader-content">
             <div class="spinner-grow align-self-center"></div>
@@ -32,7 +51,7 @@
                 <div class="card mt-3 mb-3">
                     <div class="card-body">
 
-                        <form action="{{ url('forgetPassword') }}" method="post">
+                        <form action="{{ route('forgetPassword.reset') }}" method="post">
                             @csrf
 
                             <div class="row">

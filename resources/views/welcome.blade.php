@@ -1,137 +1,776 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="zxx">
 
-        <title>Laravel</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{asset('images/indexImages/favicon.png')}}" />
+    <!-- theme meta -->
+    <meta name="theme-name" content="Pinwheel" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <meta
+        name="theme-color"
+        media="(prefers-color-scheme: light)"
+        content="#fff"
+    />
+    <meta
+        name="theme-color"
+        media="(prefers-color-scheme: dark)"
+        content="#000"
+    />
+    <meta name="generator" content="gulp" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <!-- responsive meta -->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=5"
+    />
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}.z-10{z-index: 10}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
+    <!-- title -->
+    <title>Pinwheel-tailwind</title>
 
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-                        <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                    @endauth
+    <!-- noindex robots -->
+    <meta name="robots" content="" />
+
+    <!-- meta-description -->
+    <meta name="description" content="meta description" />
+
+    <!-- author from config.json -->
+    <meta name="author" content="{config.metadata.meta_author}" />
+
+    <!-- og-title -->
+    <meta property="og:title" content="" />
+
+    <!-- og-description -->
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/" />
+
+    <!-- twitter-title -->
+    <meta name="twitter:title" content="" />
+
+    <!-- twitter-description -->
+    <meta name="twitter:description" content="" />
+
+    <!-- og-image -->
+    <meta property="og:image" content="" />
+
+    <!-- twitter-image -->
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- google font css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet"
+    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&amp;display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- styles -->
+
+    <!-- Swiper slider -->
+    <link rel="stylesheet" href="{{asset('plugins/swiper/swiper-bundle.css')}}" />
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="{{asset('plugins/font-awesome/v6/brands.css')}}" />
+    <link rel="stylesheet" href="{{asset('plugins/font-awesome/v6/solid.css')}}" />
+    <link rel="stylesheet" href="{{asset('plugins/font-awesome/v6/fontawesome.css')}}" />
+    <!-- Main Stylesheet -->
+    <link href="{{asset('css/styles/main.css')}}" rel="stylesheet" />
+</head>
+<body>
+@if(session('success'))
+    <div class="bg-green-400 text-green-500">{{session('success')}}</div>
+@endif
+@if($errors->any())
+    @foreach($errors->all() as $error)
+        <div class="bg-red-400 text-red-500">{{$error}}</div>
+    @endforeach
+@endif
+<header class="header">
+    <nav class="navbar container">
+        <!-- logo -->
+        <div class="order-0">
+            <a href="index-2.html">
+                <img src="{{asset('images/indexImages/logo.svg')}}" height="30" width="147" alt="logo" />
+            </a>
+        </div>
+        <!-- navbar toggler -->
+        <input id="nav-toggle" type="checkbox" class="hidden" />
+        <label
+            id="show-button"
+            for="nav-toggle"
+            class="order-1 flex cursor-pointer items-center lg:order-1 lg:hidden"
+        >
+            <svg class="h-6 fill-current" viewBox="0 0 20 20">
+                <title>Menu Open</title>
+                <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+            </svg>
+        </label>
+        <label
+            id="hide-button"
+            for="nav-toggle"
+            class="order-2 hidden cursor-pointer items-center lg:order-1"
+        >
+            <svg class="h-6 fill-current" viewBox="0 0 20 20">
+                <title>Menu Close</title>
+                <polygon
+                    points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+                    transform="rotate(45 10 10)"
+                ></polygon>
+            </svg>
+        </label>
+        <ul
+            id="nav-menu"
+            class="navbar-nav order-2 hidden w-full flex-[0_0_100%] lg:order-1 lg:flex lg:w-auto lg:flex-auto lg:justify-center lg:space-x-5"
+        >
+            <li class="nav-item">
+                <a href="#" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('about')}}" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="blog.html" class="nav-link">Blog</a>
+            </li>
+
+            <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+        </ul>
+        @if(auth()->check())
+            <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
+                <a class="btn btn-white btn-sm text-blue-800" href="{{route('logout')}}">Logout</a>
+            </div>
+        @else
+            <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex mr-2">
+                <a class="btn btn-white btn-sm" href="{{route('register.index')}}">Sing Up Now</a>
+            </div>
+            <div class="order-1 ml-auto hidden items-center md:order-2 md:ml-0 lg:flex">
+                <a class="btn btn-white btn-sm" href="{{route('login.index')}}">Login Now</a>
+            </div>
+        @endif
+    </nav>
+</header>
+<!-- Banner -->
+<section class="section banner relative">
+    <div class="container">
+        <div class="row items-center">
+            <div class="lg:col-6">
+                <h1 class="banner-title">
+                    Scale design & dev operations with Avocode Enterprise
+                </h1>
+                <p class="mt-6">
+                    A fully integrated suite of authentication & authoriz products,
+                    Stytch’s platform removes the headache of.
+                </p>
+                <a class="btn btn-white mt-8" href="#">Download The Theme</a>
+            </div>
+            <div class="lg:col-6">
+                <img
+                    class="w-full object-contain"
+                    src="{{asset('images/indexImages/banners-img.png')}}"
+                    width="603"
+                    height="396"
+                    alt=""
+                />
+            </div>
+        </div>
+    </div>
+    <img
+        class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
+        src="{{asset('images/indexImages/banner-shape.svg')}}"
+        alt=""
+    />
+</section>
+<!-- ./end Banner -->
+
+<!-- Key features -->
+<section class="section key-feature relative">
+    <img
+        class="absolute left-0 top-0 -z-[1] -translate-y-1/2"
+        src="{{asset('images/indexImages/icons/feature-shape.svg')}}"
+        alt=""
+    />
+    <div class="container">
+        <div class="row justify-between text-center lg:text-start">
+            <div class="lg:col-5">
+                <h2>The Highlighting Part Of Our Solution</h2>
+            </div>
+            <div class="mt-6 lg:col-5 lg:mt-0">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas
+                    Werat viverra id et aliquet. vulputate egestas sollicitudin .
+                </p>
+            </div>
+        </div>
+        <div
+            class="key-feature-grid mt-10 grid grid-cols-2 gap-7 md:grid-cols-3 xl:grid-cols-4"
+        >
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Live Caption</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
-
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-1.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Smart Reply</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
                 </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-2.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Sound Amplifier</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-3.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Gesture Navigation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-4.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Dark Theme</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-5.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Privacy Controls</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-6.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Location Controls</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-7.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Security Updates</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-8.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Focus Mode</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-9.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+            <div
+                class="flex flex-col justify-between rounded-lg bg-white p-5 shadow-lg"
+            >
+                <div>
+                    <h3 class="h4 text-xl lg:text-2xl">Family Link</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                </div>
+                <span class="icon mt-4">
+          <img
+              class="objec-contain"
+              src="{{asset('images/indexImages/icons/feature-icon-10.svg')}}"
+              alt=""
+          />
+        </span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./end Key features -->
 
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
+<!-- Services -->
+<section class="section services">
+    <div class="container">
+        <div class="tab row gx-5 items-center" data-tab-group="integration-tab">
+            <div class="lg:col-7 lg:order-2">
+                <div class="tab-content" data-tab-content>
+                    <div class="tab-content-panel active" data-tab-panel="0">
+                        <img
+                            class="w-full object-contain"
+                            src="{{asset('images/indexImages/sells-by-country.png')}}"
+                        />
+                    </div>
+                    <div class="tab-content-panel" data-tab-panel="1">
+                        <img class="w-full object-contain" src="{{asset('images/indexImages/collaboration.png')}}" />
+                    </div>
+                    <div class="tab-content-panel" data-tab-panel="2">
+                        <img
+                            class="w-full object-contain"
+                            src="{{asset('images/indexImages/sells-by-country.png')}}"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6 lg:col-5 lg:order-1 lg:mt-0">
+                <div class="text-container">
+                    <h2 class="lg:text-4xl">
+                        Prevent failure from to impacting your reputation
+                    </h2>
+                    <p class="mt-4">
+                        Our platform helps you build secure onboarding authentication
+                        experiences that retain and engage your users. We build the
+                        infrastructure, you can.
+                    </p>
+                    <ul class="tab-nav -ml-4 mt-8 border-b-0" data-tab-nav>
+                        <li class="tab-nav-item active" data-tab="0">
+                            <img class="mr-3" src="{{asset('images/indexImages/icons/drop.svg')}}" alt="" />
+                            Habit building essential choose habit
+                        </li>
+                        <li class="tab-nav-item" data-tab="1">
+                            <img class="mr-3" src="{{asset('images/indexImages/icons/brain.svg')}}" alt="" />
+                            Get an overview of Habit Calendars.
+                        </li>
+                        <li class="tab-nav-item" data-tab="2">
+                            <img class="mr-3" src="{{asset('images/indexImages/icons/timer.svg')}}" alt="" />
+                            Start building with Habitify platform
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5 mt-12 items-center lg:mt-0">
+            <div class="lg:col-7">
+                <div class="relative">
+                    <img class="w-full object-contain" src="{{asset('images/indexImages/collaboration.png')}}" />
+                    <img
+                        class="absolute bottom-6 left-1/2 -z-[1] -translate-x-1/2"
+                        src="{{asset('images/indexImages/shape.svg')}}"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="mt-6 lg:col-5 lg:mt-0">
+                <div class="text-container">
+                    <h2 class="lg:text-4xl">
+                        Accept payments any country in this whole universe
+                    </h2>
+                    <p class="mt-4">
+                        Donec sollicitudin molestie malesda. Donec sollitudin molestie
+                        malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies
+                        ligula sed
+                    </p>
+                    <ul class="mt-6 text-dark lg:-ml-4">
+                        <li class="mb-2 flex items-center rounded px-4">
+                            <img
+                                class="mr-3"
+                                src="{{asset('images/indexImages/icons/checkmark-circle.svg')}}"
+                                alt=""
+                            />
+                            Supporting more than 119 country world
+                        </li>
+                        <li class="mb-2 flex items-center rounded px-4">
+                            <img
+                                class="mr-3"
+                                src="{{asset('images/indexImages/icons/checkmark-circle.svg')}}"
+                                alt=""
+                            />
+                            Open transaction with more than currencies
+                        </li>
+                        <li class="flex items-center rounded px-4">
+                            <img
+                                class="mr-3"
+                                src="{{asset('images/indexImages/icons/checkmark-circle.svg')}}"
+                                alt=""
+                            />
+                            Customer Service with 79 languages
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row gx-5 mt-12 items-center lg:mt-0">
+            <div class="lg:col-7 lg:order-2">
+                <div class="video pb-5 pr-9">
+                    <div class="video-thumbnail overflow-hidden rounded-2xl">
+                        <img
+                            class="w-full object-contain"
+                            src="{{asset('images/indexImages/intro-thumbnail.png')}}"
+                            alt=""
+                        />
+                        <button class="video-play-btn">
+                            <img src="{{asset('images/indexImages/icons/play-icon.svg')}}" alt="" />
+                        </button>
+                    </div>
+                    <div
+                        class="video-player absolute left-0 top-0 z-10 hidden h-full w-full"
+                    >
+                        <iframe
+                            class="h-full w-full"
+                            allowfullscreen=""
+                            src="https://www.youtube.com/embed/g3-VxLQO7do?autoplay=1"
+                        ></iframe>
+                    </div>
+                    <img
+                        class="intro-shape absolute bottom-0 right-0 -z-[1]"
+                        src="{{asset('images/indexImages/shape.svg')}}"
+                        alt=""
+                    />
+                </div>
+            </div>
+            <div class="mt-6 lg:col-5 lg:order-1 lg:mt-0">
+                <div class="text-container">
+                    <h2 class="lg:text-4xl">Accountability that works for you</h2>
+                    <p class="mt-4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                        egestas Werat viverra id et aliquet. vulputate egestas sollicitudin
+                        .
+                    </p>
+                    <button class="btn btn-white mt-6">know about us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ./end Services -->
+
+<!-- Reviews -->
+<section class="reviews">
+    <div class="container">
+        <div class="row justify-between">
+            <div class="lg:col-6">
+                <h2>Our customers have nice things to say about us</h2>
+            </div>
+            <div class="lg:col-4">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas
+                    Werat viverra id et aliquet. vulputate egestas sollicitudin .
+                </p>
+            </div>
+        </div>
+        <div class="row mt-10">
+            <div class="col-12">
+                <div class="swiper reviews-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review-author-avatar bg-gradient">
+                                    <img src="{{asset('images/indexImages/users/user-5.png')}}" alt="" />
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
+                                <h4 class="mb-2">Courtney Henry</h4>
+                                <p class="mb-4 text-[#666]">microsoft corp</p>
+                                <p>
+                                    Our platform helps build secure onboarding authentica
+                                    experiences & engage your users. We build .
                                 </p>
+                                <div
+                                    class="review-rating mt-6 flex items-center justify-center space-x-2.5"
+                                >
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star-white.svg')}}" alt="" />
+                                </div>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review-author-avatar bg-gradient">
+                                    <img src="{{asset('images/indexImages/users/user-2.png')}}" alt="" />
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                                <h4 class="mb-2">Ronald Richards</h4>
+                                <p class="mb-4 text-[#666]">meta limited</p>
+                                <p>
+                                    Our platform helps build secure onboarding authentica
+                                    experiences & engage your users. We build .
                                 </p>
+                                <div
+                                    class="review-rating mt-6 flex items-center justify-center space-x-2.5"
+                                >
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star-white.svg')}}" alt="" />
+                                </div>
                             </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <div class="review-author-avatar bg-gradient">
+                                    <img src="{{asset('images/indexImages/users/user-6.png')}}" alt="" />
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
+                                <h4 class="mb-2">Bessie Cooper</h4>
+                                <p class="mb-4 text-[#666]">apple inc ltd</p>
+                                <p>
+                                    Our platform helps build secure onboarding authentica
+                                    experiences & engage your users. We build .
                                 </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
+                                <div
+                                    class="review-rating mt-6 flex items-center justify-center space-x-2.5"
+                                >
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star.svg')}}" alt="" />
+                                    <img src="{{asset('images/indexImages/icons/star-white.svg')}}" alt="" />
                                 </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
                             </div>
                         </div>
                     </div>
+                    <!-- If we need pagination -->
+                    <div
+                        class="swiper-pagination reviews-carousel-pagination !bottom-0"
+                    ></div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Reviews -->
 
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
-                        </div>
-                    </div>
+<!-- Call To action -->
+<section class="px-5 py-20 xl:py-[120px]">
+    <div class="container">
+        <div
+            class="bg-gradient row justify-center rounded-b-[80px] rounded-t-[20px] px-[30px] pb-[75px] pt-16"
+        >
+            <div class="lg:col-11">
+                <div class="row justify-center">
+                    <div class="lg:col-7 ">
+                        <form action="{{route('newsletter.store')}}" method="post">
+                            @csrf
+                            <h2 class="h1 text-white">Subscribe To Our New Letter</h2>
+                            <label class="bg-red-700 text-yellow-400 font-bold h-36 w-36 p-2 mr-0 rounded hover:cursor-pointer">Email:</label>
+                            <input type="email" name="email" class="bg-gray-100 rounded">
+                            <button type="submit" name="submit" class="btn bg-white mt-8 ml-6 rounded-[30px] text-lg">Subscribe</button>
+                        </form>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</section>
+<div
+    class="fixed left-0 top-0 z-50 flex w-[30px] items-center justify-center bg-gray-200 py-[2.5px] text-[12px] uppercase text-black sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 2xl:bg-pink-200"
+>
+    <span class="block sm:hidden">all</span>
+    <span class="hidden sm:block md:hidden">sm</span>
+    <span class="hidden md:block lg:hidden">md</span>
+    <span class="hidden lg:block xl:hidden">lg</span>
+    <span class="hidden xl:block 2xl:hidden">xl</span>
+    <span class="hidden 2xl:block">2xl</span>
+</div>
+
+<footer class="footer bg-theme-light/50">
+    <div class="container">
+        <div class="row gx-5 pb-10 pt-[52px]">
+            <div class="col-12 mt-12 md:col-6 lg:col-3">
+                <a href="index-2.html">
+                    <img src="{{asset('images/indexImages/logo.svg')}}" alt="" />
+                </a>
+                <p class="mt-6">
+                    Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo
+                    tellus, sed condimentum volutpat.
+                </p>
+            </div>
+            <div class="col-12 mt-12 md:col-6 lg:col-3">
+                <h6>Socials</h6>
+                <p>themefisher@gmail.com</p>
+                <ul class="social-icons mt-4 lg:mt-6">
+                    <li>
+                        <a href="#">
+                            <svg
+                                width="19"
+                                height="21"
+                                viewBox="0 0 20 21"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M19.1056 10.4495C19.1056 5.09642 15 0.759277 9.9327 0.759277C4.86539 0.759277 0.759766 5.09642 0.759766 10.4495C0.759766 15.2946 4.08865 19.3191 8.49018 20.0224V13.2627H6.15996V10.4495H8.49018V8.33951C8.49018 5.91696 9.85872 4.54939 11.93 4.54939C12.9657 4.54939 14.0013 4.74476 14.0013 4.74476V7.12823H12.8547C11.7081 7.12823 11.3382 7.87063 11.3382 8.65209V10.4495H13.8904L13.4835 13.2627H11.3382V20.0224C15.7398 19.3191 19.1056 15.2946 19.1056 10.4495Z"
+                                    fill="#222222"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg
+                                width="19"
+                                height="15"
+                                viewBox="0 0 19 15"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M16.3308 3.92621C17.0129 3.42889 17.6269 2.83209 18.1044 2.13583C17.4904 2.40108 16.7742 2.60001 16.0579 2.66632C16.8083 2.2353 17.354 1.5722 17.6269 0.743317C16.9447 1.14118 16.1603 1.43958 15.3758 1.60535C14.6937 0.909093 13.7728 0.51123 12.7496 0.51123C10.7714 0.51123 9.16837 2.06952 9.16837 3.99252C9.16837 4.25777 9.20248 4.52301 9.27069 4.78825C6.3034 4.62247 3.64307 3.22995 1.86952 1.14118C1.56256 1.63851 1.39202 2.2353 1.39202 2.8984C1.39202 4.09199 2.00595 5.15296 2.99504 5.7829C2.41523 5.74975 1.83541 5.61713 1.35792 5.35189V5.38504C1.35792 7.07596 2.58576 8.46847 4.22289 8.80002C3.95003 8.86633 3.60897 8.93265 3.302 8.93265C3.06326 8.93265 2.85862 8.89949 2.61987 8.86633C3.06326 10.2589 4.39342 11.2535 5.96233 11.2867C4.73449 12.215 3.19968 12.7786 1.52845 12.7786C1.22149 12.7786 0.948636 12.7455 0.675781 12.7123C2.24469 13.707 4.12057 14.2706 6.16698 14.2706C12.7496 14.2706 16.3308 8.99896 16.3308 4.39039C16.3308 4.22461 16.3308 4.09199 16.3308 3.92621Z"
+                                    fill="#222222"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg
+                                width="19"
+                                height="16"
+                                viewBox="0 0 19 16"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M4.56609 15.2704V5.45315H0.948103V15.2704H4.56609ZM2.73764 4.1398C3.90474 4.1398 4.83841 3.31895 4.83841 2.33394C4.83841 1.38176 3.90474 0.59375 2.73764 0.59375C1.60945 0.59375 0.675781 1.38176 0.675781 2.33394C0.675781 3.31895 1.60945 4.1398 2.73764 4.1398ZM18.0654 15.2704H18.1044V9.8857C18.1044 7.259 17.4041 5.22331 13.7472 5.22331C11.9966 5.22331 10.8295 6.04415 10.3237 6.79933H10.2848V5.45315H6.82246V15.2704H10.4404V10.411C10.4404 9.13053 10.7128 7.91568 12.5801 7.91568C14.4475 7.91568 14.4864 9.36036 14.4864 10.5095V15.2704H18.0654Z"
+                                    fill="#222222"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg
+                                width="19"
+                                height="18"
+                                viewBox="0 0 17 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M15.3829 10.554C15.4875 10.0381 15.5573 9.48523 15.5573 8.9324C15.5573 4.76772 12.3483 1.37701 8.40687 1.37701C7.88367 1.37701 7.36047 1.45072 6.87215 1.56129C6.20943 1.00846 5.37231 0.676758 4.50031 0.676758C2.33775 0.676758 0.59375 2.55639 0.59375 4.80458C0.59375 5.76282 0.87279 6.64735 1.39599 7.34761C1.29135 7.86359 1.22159 8.41642 1.22159 8.9324C1.22159 13.1339 4.43055 16.5246 8.37199 16.5246C8.89518 16.5246 9.41838 16.4509 9.9067 16.3404C10.5694 16.8932 11.4065 17.188 12.2785 17.188C14.4411 17.188 16.1851 15.3453 16.1851 13.0602C16.22 12.1388 15.9061 11.2543 15.3829 10.554ZM8.61615 13.9447C6.31407 13.9447 4.39567 12.8759 4.39567 11.5491C4.39567 10.9595 4.70959 10.4066 5.44207 10.4066C6.52335 10.4066 6.62799 12.0651 8.51151 12.0651C9.3835 12.0651 9.97646 11.6597 9.97646 11.1069C9.97646 10.4066 9.41838 10.2961 8.51151 10.0749C6.34895 9.48523 4.39567 9.2641 4.39567 6.86849C4.39567 4.65716 6.45359 3.84633 8.19759 3.84633C10.116 3.84633 12.0693 4.65716 12.0693 5.91024C12.0693 6.53679 11.6856 7.08962 11.0229 7.08962C10.0462 7.08962 10.0113 5.83653 8.40687 5.83653C7.49999 5.83653 6.94191 6.09452 6.94191 6.68421C6.94191 7.38446 7.67439 7.45818 9.34862 7.90044C10.7787 8.23214 12.5227 8.85869 12.5227 10.7383C12.5227 12.9128 10.5345 13.9447 8.61615 13.9447Z"
+                                    fill="#222222"
+                                />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 mt-12 md:col-6 lg:col-3">
+                <h6>Quick Links</h6>
+                <ul>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Category</a>
+                    </li>
+                    <li>
+                        <a href="#">Testimonial</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 mt-12 md:col-6 lg:col-3">
+                <h6>Location & Contact</h6>
+                <p>2118 Thornridge Cir. Syracuse, Connecticut 35624</p>
+                <p>(704) 555-0127</p>
+            </div>
+        </div>
+    </div>
+    <div class="container max-w-[1440px]">
+        <div
+            class="footer-copyright mx-auto border-t border-border pb-10 pt-7 text-center"
+        >
+            <p>Designed And Developed by <a href="https://themefisher.com/" target="_blank">Themefisher</a> | Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a></p>
+
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+<!-- Swiper JS -->
+<script src="{{asset('plugins/swiper/swiper-bundle.js')}}"></script>
+<script src="{{asset('plugins/shufflejs/shuffle.js')}}"></script>
+
+<!-- Main Script -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="{{asset('js/scripts/main.js')}}"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 </html>

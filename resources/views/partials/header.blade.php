@@ -11,11 +11,22 @@
 
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-    <link href="{{asset('./css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
 
-    <link href="{{asset('./css/light/auth-boxed.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/dark/auth-boxed.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/light/auth-boxed.css')}}" rel="stylesheet" type="text/css" />
 
-    <link href="{{asset('./css/dark/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/dark/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('css/light/plugins.css')}}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
+    <link href="{{ asset('css/filepond/filepond.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/filepond/FilePondPluginImagePreview.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/light/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/dark/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/light/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('css/dark/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
+
+
 </head>
+

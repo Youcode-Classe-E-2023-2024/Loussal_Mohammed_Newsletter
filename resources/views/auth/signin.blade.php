@@ -54,7 +54,7 @@
                                 <p>Enter your email and password to login</p>
 
                             </div>
-                            <form action="{{ route('login') }}" method="post">
+                            <form action="{{ route('login.reset') }}" method="post">
                                 @csrf
 
                                 <div class="col-md-12">
@@ -125,12 +125,12 @@
 
                             <div class="col-12">
                                 <div class="text-center">
-                                    <p class="mb-0">Dont't have an account ? <a href="{{route('Form-register')}}" class="text-warning">Sign Up</a></p>
+                                    <p class="mb-0">Dont't have an account ? <a href="{{route('register.index')}}" class="text-warning">Sign Up</a></p>
                                 </div>
                             </div>
                             <div class="col-12 mt-2">
                                 <div class="text-center">
-                                    <p class="mb-0">Forgot PAssword? <a href="{{route('forget')}}" class="text-warning">Reset Password</a></p>
+                                    <p class="mb-0">Forgot Password? <a href="{{ route('forgetPassword.index') }}" class="text-warning">Reset Password</a></p>
                                 </div>
                             </div>
 

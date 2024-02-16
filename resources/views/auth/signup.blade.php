@@ -29,16 +29,25 @@
                         <div class="row">
                             <div class="col-md-12 mb-3">
 
-                                <h2>Sign Up</h2>
+                                <h2 class="text-2xl font-bold">Sign Up</h2>
                                 <p>Enter your email and password to register </p>
 
                             </div>
-                            <form action="{{ url('/register') }}" method="post">
+                            <form action="{{ route('register.reset') }}" method="post">
                                 @csrf
                                 <div class="col-md-12">
                                     <div class="mb-3">
                                         <label class="form-label">Name</label>
                                         <input type="text" class="form-control add-billing-address-input" name="name" value="{{ old('name') }}">
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Role</label>
+                                        <select class="ml-4 bg-secondary rounded w-44 h-10 text-center text-2xl px-6" name="role">
+                                            <option class="bg-white text-black hover:bg-secondary text-center pr-6">Member</option>
+                                            <option class="bg-white text-black hover:bg-secondary text-center pr-6">Redact</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -92,24 +101,24 @@
                             <div class="col-sm-4 col-12">
                                 <div class="mb-4">
                                     <button class="btn  btn-social-login w-100">
-                                        <img src="https://designreset.com/cork/html/src/assets/img/github-icon.svg" alt="" class="img-fluid">
-                                        <span class="btn-text-inner">Github</span>
+                                        <img src="https://designreset.com/cork/html/src/assets/img/github-icon.svg" alt="" class="img-fluid flex-col">
+                                        <span class="btn-text-inner flex-col">Github</span>
                                     </button>
                                 </div>
                             </div>
 
                             <div class="col-sm-4 col-12">
                                 <div class="mb-4">
-                                    <button class="btn  btn-social-login w-100">
-                                        <img src="https://designreset.com/cork/html/src/assets/img/twitter.svg" alt="" class="img-fluid">
-                                        <span class="btn-text-inner">Twitter</span>
+                                    <button class="btn  btn-social-login w-100 flex justify-center">
+                                        <img src="https://designreset.com/cork/html/src/assets/img/twitter.svg" alt="" class="img-fluid flex-col">
+                                        <span class="btn-text-inner flex-col">Twitter</span>
                                     </button>
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="text-center">
-                                    <p class="mb-0">Already have an account ? <a href="{{route('login')}}" class="text-warning">Sign in</a></p>
+                                    <p class="mb-0">Already have an account ? <a href="{{route('login.index')}}" class="text-warning">Sign in</a></p>
                                 </div>
                             </div>
 
