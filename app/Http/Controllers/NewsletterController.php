@@ -34,6 +34,7 @@ class NewsletterController extends Controller
         return redirect()->route('newsletter.index')->with('success', 'subscribed to newsletter successfully!');
     }
 
+
     public function drop($newsletter) {
         $newsletter->drop();
 

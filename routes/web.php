@@ -6,6 +6,7 @@ use App\Http\Controllers\ForgetPasswordMail;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\users\users;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,7 +47,7 @@ Route::group(['middleware' => 'auth'], function() {
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::group(['middleware' => 'role:Redact'], function() {
+Route::group(['middleware' => 'role:Redact', 'checkRoleAndPermission:Redact, manage users|create media|list media|manage newsletter'], function() {
     Route::get('/media', [MediaController::class, 'index'])->name('media.index');
     Route::post('/media', [MediaController::class, 'store'])->name('media.add');
 
@@ -56,4 +57,7 @@ Route::group(['middleware' => 'role:Redact'], function() {
 Route::group(['middleware' => 'role:Admin'], function () {
     Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.index');
     Route::get('/pdf', [AdminController::class, 'download'])->name('admin.pdf');
+    Route::get('/list', [users::class, 'listUsers']);
+    Route::delete('/list/{user}', [users::class, 'dropUser'])->name('dropUser');
+    Route::post('/list/{user}', [users::class, 'restoreUser'])->name('restoreUser');
 });
